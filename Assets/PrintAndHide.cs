@@ -10,7 +10,7 @@ public class PrintAndHide : MonoBehaviour
     void Start()
     {
         i = 0;
-        randValue = Random.Range(200, 250);
+        randValue = Random.Range(200, 251);
         
     }
 
