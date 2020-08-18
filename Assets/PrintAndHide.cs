@@ -5,10 +5,12 @@ using UnityEngine;
 public class PrintAndHide : MonoBehaviour
 {
     public Renderer rent;
-    private int i = 0;
+    private int i, randValue;
     // Start is called before the first frame update
     void Start()
-    {    
+    {
+        i = 0;
+        randValue = Random.Range(200, 250);
         
     }
 
@@ -17,6 +19,11 @@ public class PrintAndHide : MonoBehaviour
     {
         Debug.Log(gameObject.name + ":" + i);
         i++;
-        
+
+        if (gameObject.CompareTag("Red")&i == 100)
+            gameObject.SetActive(false);
+        if (gameObject.CompareTag("Blue")&i == randValue)
+            rent.enabled = false;
+
     }
 }
